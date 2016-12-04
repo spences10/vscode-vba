@@ -2,7 +2,7 @@
     "name": "vba",
     "displayName": "VSCode VBA",
     "description": "VBA language syntax highlighting support for Visual Studio Code",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "images/logo.png",
     "publisher": "spences10",
     "engines": {
@@ -17,29 +17,35 @@
         "url": "https://github.com/luggage66/vscode-vba.git"
     },
     "contributes": {
-        "languages": [{
-            "id": "vba",
-            "aliases": [
-                "VBA",
-                "vba"
-            ],
-            "extensions": [
-                ".bas",
-                ".cls",
-                ".frm",
-                ".sht",
-                ".wbk"
-            ],
-            "configuration": "./vba.configuration.json"
-        }],
-        "grammars": [{
-            "language": "vba",
-            "scopeName": "source.vba",
-            "path": "./syntaxes/vba.json"
-        }],
-        "snippets": [{
-            "language": "vba",
-            "path": "./snippets/vba.json"
-        }]
+        "languages": [
+            {
+                "id": "vba",
+                "aliases": [
+                    "VBA",
+                    "vba"
+                ],
+                "extensions": [
+                    ".bas",
+                    ".cls",
+                    ".frm",
+                    ".sht",
+                    ".wbk"
+                ],
+                "configuration": "./vba.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "vba",
+                "scopeName": "source.vba",
+                "path": "./syntaxes/vba.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "vba",
+                "path": "./snippets/vba.json"
+            }
+        ]
     }
 }
