@@ -1,6 +1,6 @@
 {
-    "name": "VBA",
-    "displayName": "VBA",
+    "name": "vba",
+    "displayName": "VSCode VBA",
     "description": "VBA language syntax highlighting support for Visual Studio Code",
     "version": "1.0.0",
     "icon": "images/logo.png",
