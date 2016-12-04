@@ -41,4 +41,4 @@ You can contact me in the following ways:
 
 ## Links
 - [Source Code](https://github.com/spences10/vscode-vba)
-- [Market](https://marketplace.visualstudio.com/items/spences10.vscode-vba)
+- [Market](https://marketplace.visualstudio.com/items?itemName=spences10.VBA)
