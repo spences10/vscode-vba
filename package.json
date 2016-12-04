@@ -1,8 +1,8 @@
 {
     "name": "vba",
     "displayName": "VSCode VBA",
-    "description": "VBA language syntax highlighting support for Visual Studio Code",
-    "version": "1.0.2",
+    "description": "VBA language syntax highlighting support and code snippets for VSCode",
+    "version": "1.0.3",
     "icon": "images/logo.png",
     "publisher": "spences10",
     "engines": {
