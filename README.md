@@ -26,7 +26,7 @@ This package provides syntax highlighting and snippets of VBA. Based off of [VBS
 ## Installation
 Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
 ```
-ext install vscode-vba
+ext install vba
 ```
 
 ## Contributing
