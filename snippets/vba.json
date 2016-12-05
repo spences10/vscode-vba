@@ -89,11 +89,11 @@
         "prefix": "Ife",
         "body": [
             "If ${1:expression} Then",
-            "",
-            "   ElseIf ${1:expression} Then",
-            "",
-            "   Else",
-            "",
+            "    ",
+            "ElseIf ${1:expression} Then",
+            "    ",
+            "Else",
+            "    ",
             "End If"
         ],
         "description": "If ElseIf Else code block"
@@ -106,7 +106,7 @@
         "prefix": "ForE",
         "body": [
             "For Each ${1:element} In ${2:group} ",
-            "   ",
+            "    ",
             "Next ${1:element}"
         ],
         "description": "For Each code block"
@@ -117,7 +117,9 @@
         "prefix": "DoLoopw",
         "body": [
             "Do",
+            "    ",
             "Exit Do",
+            "    ",
             "Loop While"
         ],
         "description": "Do Loop While code block"
@@ -127,7 +129,9 @@
         "prefix": "DoLoopu",
         "body": [
             "Do",
-            "Exit Do",
+            "    ",
+            "    Exit Do",
+            "    ",
             "Loop Until"
         ],
         "description": "Do Loop Until code block"
@@ -137,7 +141,7 @@
         "prefix": "DoWhile",
         "body": [
             "Do While ${1:condition}",
-            "",
+            "    ",
             "Loop"
         ],
         "description": "Do While Loop code block"
@@ -148,7 +152,7 @@
         "prefix": "DoUntil",
         "body": [
             "Do Until ${1:condition}",
-            "",
+            "    ",
             "Loop"
         ],
         "description": "Do Until Loop code block"
@@ -159,13 +163,13 @@
         "prefix": "Suberr",
         "body": [
             "Sub ${1:subName}()",
-            "   '// add declarations",
-            "   On Error GoTo catchError",
+            "    '// add declarations",
+            "    On Error GoTo catchError",
             "exitSub:",
-            "   Exit Sub",
+            "    Exit Sub",
             "catchError:",
-            "   '// add error handling",
-            "   GoTo exitSub",
+            "    '// add error handling",
+            "    GoTo exitSub",
             "End Sub"
         ],
         "description": "Sub code block with error handling"
@@ -174,13 +178,13 @@
         "prefix": "Functionerr",
         "body": [
             "Function ${1:functionName}() As ${2:functionType}",
-            "   '// add declarations",
-            "   On Error GoTo catchError",
+            "    '// add declarations",
+            "    On Error GoTo catchError",
             "exitFunction:",
-            "   Exit Function",
+            "    Exit Function",
             "catchError:",
-            "   '// add error handling",
-            "   GoTo exitFunction",
+            "    '// add error handling",
+            "    GoTo exitFunction",
             "End Function"
         ],
         "description": "Function code block with error handling"
@@ -190,10 +194,10 @@
         "prefix": "Selectc",
         "body": [
             "Select Case ${1:testexpression}",
-            "   Case ${2:expressionlist-n}",
-            "       ${3:statements-n}",
-            "   Case Else",
-            "       ${4:elsestatements}",
+            "    Case ${2:expressionlist-n}",
+            "        ${3:statements-n}",
+            "    Case Else",
+            "        ${4:elsestatements}",
             "End Select"
         ],
         "description": "Select Case code block"
