@@ -201,5 +201,12 @@
             "End Select"
         ],
         "description": "Select Case code block"
+    },
+    "MsgBox": {
+        "prefix": "MsgBox",
+        "body": [
+            "MsgBox \"${1:msgPrompt}\", ${2:vbButtonType}, \"${3:msgTitle}\""
+        ],
+        "description": "Message box code block"
     }
 }
