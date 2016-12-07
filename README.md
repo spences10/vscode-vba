@@ -1,5 +1,7 @@
 # VSCode VBA
 
+[![Marketplace Version](http://vsmarketplacebadge.apphb.com/version/spences10.vba.svg)](https://marketplace.visualstudio.com/items?itemName=spences10.vba) [![Installs](http://vsmarketplacebadge.apphb.com/installs/spences10.vba.svg)](https://marketplace.visualstudio.com/items?itemName=spences10.vba) [![Rating](http://vsmarketplacebadge.apphb.com/rating/spences10.vba.svg)](https://marketplace.visualstudio.com/items?itemName=spences10.vba)
+
 <!-- TOC depthFrom:2 -->
 
 - [Syntax Highlighting](syntax-highlighting)
