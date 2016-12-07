@@ -14,7 +14,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/luggage66/vscode-vba.git"
+        "url": "https://github.com/spences10/vscode-vba.git"
     },
     "contributes": {
         "languages": [
