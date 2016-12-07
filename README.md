@@ -14,7 +14,9 @@
 <!-- /TOC -->
 
 ## Syntax Highlighting
-This package provides syntax highlighting and snippets of VBA. Based off of [VBScript](https://marketplace.visualstudio.com/items?itemName=luggage66.VBScript) which is based of an import of a .tmLanguage file.
+This package provides syntax highlighting and snippets of VBA. 
+
+Based off an import of the [VBScript.tmLanguage](https://github.com/SublimeText/VBScript/blob/master/VBScript.tmLanguage) file from the [Sublime Text VBScript](https://github.com/SublimeText/VBScript) repository. 
 
 ## Snippets
 
