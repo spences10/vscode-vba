@@ -2,11 +2,11 @@
     "name": "vba",
     "displayName": "VSCode VBA",
     "description": "VBA language syntax highlighting support and code snippets for VSCode",
-    "version": "1.0.12",
+    "version": "1.0.16",
     "icon": "images/logo.png",
     "publisher": "spences10",
     "engines": {
-        "vscode": "^0.10.1"
+        "vscode": "^1.8.1"
     },
     "categories": [
         "Languages",
