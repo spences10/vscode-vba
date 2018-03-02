@@ -99,7 +99,37 @@
             "name": "variable.other.dim.asp"
         },
         {
-            "match": "(?i:\\s*\\b(Call|Class|Const|Dim|Redim|Function|Sub|Private Sub|Public Sub|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
+            "captures": {
+                "1": {
+                    "name": "storage.type.asp"
+                },
+                "2": {
+                    "name": "variable.other.bfeac.asp"
+                },
+                "3": {
+                    "name": "meta.separator.comma.asp"
+                }
+            },
+            "match": "(?i:(static)\\s*(?:(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b)\\s*(,?)))",
+            "name": "variable.other.dim.asp"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "storage.type.asp"
+                },
+                "2": {
+                    "name": "variable.other.bfeac.asp"
+                },
+                "3": {
+                    "name": "meta.separator.comma.asp"
+                }
+            },
+            "match": "(?i:(const)\\s*(?:(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b)\\s*(,?)))",
+            "name": "variable.other.dim.asp"
+        },
+        {
+            "match": "(?i:\\s*\\b(Call|Class|Const|Static|Dim|Redim|Function|Sub|Private Sub|Public Sub|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
             "name": "storage.type.asp"
         },
         {
