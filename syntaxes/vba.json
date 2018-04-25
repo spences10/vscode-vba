@@ -129,7 +129,7 @@
             "name": "variable.other.dim.asp"
         },
         {
-            "match": "(?i:\\s*\\b(Call|Class|Const|Static|Dim|Redim|Function|Sub|Private Sub|Public Sub|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
+            "match": "(?i:\\s*\\b(Call|Class|Const|Static|Dim|Redim|Function|Sub|Private Sub|Public Sub|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|Option Compare Text|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
             "name": "storage.type.asp"
         },
         {
