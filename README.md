@@ -15,6 +15,7 @@
 - [Contributing](#contributing)
 - [Contacts](#contacts)
 - [Links](#links)
+- [Handy links](#handy-links)
 
 <!-- /TOC -->
 
@@ -66,3 +67,14 @@ You can contact me in the following ways:
 
 - [Source Code](https://github.com/spences10/vscode-vba)
 - [Market](https://marketplace.visualstudio.com/items?itemName=spences10.VBA)
+
+## Handy links
+
+I struggled to find how to generate a token after not doing anything
+with this project for well over a year:
+
+https://YOUR_USER_NAME.visualstudio.com/_details/security/tokens
+
+Some good documentation on the CLI:
+
+https://vscode-docs.readthedocs.io/en/latest/tools/vscecli/
