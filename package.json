@@ -1,51 +1,51 @@
 {
-    "name": "vba",
-    "displayName": "VSCode VBA",
-    "description": "VBA language syntax highlighting support and code snippets for VSCode",
-    "version": "1.0.16",
-    "icon": "images/logo.png",
-    "publisher": "spences10",
-    "engines": {
-        "vscode": "^1.8.1"
-    },
-    "categories": [
-        "Languages",
-        "Snippets"
+  "name": "vba",
+  "displayName": "VSCode VBA",
+  "description": "VBA language syntax highlighting support and code snippets for VSCode",
+  "version": "1.0.16",
+  "icon": "images/logo.png",
+  "publisher": "spences10",
+  "engines": {
+    "vscode": "^1.8.1"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/vscode-vba.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "vba",
+        "aliases": [
+          "VBA",
+          "vba"
+        ],
+        "extensions": [
+          ".bas",
+          ".cls",
+          ".frm",
+          ".sht",
+          ".wbk"
+        ],
+        "configuration": "./vba.configuration.json"
+      }
     ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/spences10/vscode-vba.git"
-    },
-    "contributes": {
-        "languages": [
-            {
-                "id": "vba",
-                "aliases": [
-                    "VBA",
-                    "vba"
-                ],
-                "extensions": [
-                    ".bas",
-                    ".cls",
-                    ".frm",
-                    ".sht",
-                    ".wbk"
-                ],
-                "configuration": "./vba.configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "vba",
-                "scopeName": "source.vba",
-                "path": "./syntaxes/vba.json"
-            }
-        ],
-        "snippets": [
-            {
-                "language": "vba",
-                "path": "./snippets/vba.json"
-            }
-        ]
-    }
+    "grammars": [
+      {
+        "language": "vba",
+        "scopeName": "source.vba",
+        "path": "./syntaxes/vba.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "vba",
+        "path": "./snippets/vba.json"
+      }
+    ]
+  }
 }

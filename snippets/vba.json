@@ -1,212 +1,143 @@
 {
-    // DATA TYPES ===================================================
-    /*
-    Boolean
-    Integer
-    Long	
-    Single	
-    Double 
-    Currency	
-    Date	
-    String
-    Object	
-    Variant
-    */
-
-    "Boolean": {
-        "prefix": "Dimb",
-        "body": [
-            "Dim bol${1:varName} As Boolean"
-        ],
-        "description": "Boolean declaration"
-    },
-    "Integer": {
-        "prefix": "Dimi",
-        "body": [
-            "Dim int${1:varName} As Integer"
-        ],
-        "description": "Integer declaration"
-    },
-    "Long": {
-        "prefix": "Diml",
-        "body": [
-            "Dim lng${1:varName} As Long"
-        ],
-        "description": "Long declaration"
-    },
-    "Single": {
-        "prefix": "Dims",
-        "body": [
-            "Dim sng${1:varName} As Single"
-        ],
-        "description": "Single declaration"
-    },
-    "Double": {
-        "prefix": "Dimd",
-        "body": [
-            "Dim dbl${1:varName} As Double"
-        ],
-        "description": "Double declaration"
-    },
-    "Currency": {
-        "prefix": "Dimc",
-        "body": [
-            "Dim cur${1:varName} As Currency"
-        ],
-        "description": "Currency declaration"
-    },
-    "Date": {
-        "prefix": "Dimdt",
-        "body": [
-            "Dim dat${1:varName} As Date"
-        ],
-        "description": "Date declaration"
-    },
-    "String": {
-        "prefix": "Dims",
-        "body": [
-            "Dim str${1:varName} As String"
-        ],
-        "description": "String declaration"
-    },
-    "Object": {
-        "prefix": "Dimo",
-        "body": [
-            "Dim obj${1:varName} As Object"
-        ],
-        "description": "Object declaration"
-    },
-    "Variant": {
-        "prefix": "Dimv",
-        "body": [
-            "Dim bol${1:varName} As Variant"
-        ],
-        "description": "Variant declaration"
-    },
-
-    // If Else ===================================================
-    "If": {
-        "prefix": "Ife",
-        "body": [
-            "If ${1:expression} Then",
-            "    ",
-            "ElseIf ${1:expression} Then",
-            "    ",
-            "Else",
-            "    ",
-            "End If"
-        ],
-        "description": "If ElseIf Else code block"
-    },
-
-    // Loops ===================================================
-
-    // For Each ===================================================
-    "ForEach": {
-        "prefix": "ForE",
-        "body": [
-            "For Each ${1:element} In ${2:group} ",
-            "    ",
-            "Next ${1:element}"
-        ],
-        "description": "For Each code block"
-    },
-
-    // Do Loop ===================================================
-    "DoLoopw": {
-        "prefix": "DoLoopw",
-        "body": [
-            "Do",
-            "    ",
-            "Exit Do",
-            "    ",
-            "Loop While"
-        ],
-        "description": "Do Loop While code block"
-    },
-    // Do Loop ===================================================
-    "DoLoopu": {
-        "prefix": "DoLoopu",
-        "body": [
-            "Do",
-            "    ",
-            "    Exit Do",
-            "    ",
-            "Loop Until"
-        ],
-        "description": "Do Loop Until code block"
-    },
-    // Do While ===================================================
-    "DoWhile": {
-        "prefix": "DoWhile",
-        "body": [
-            "Do While ${1:condition}",
-            "    ",
-            "Loop"
-        ],
-        "description": "Do While Loop code block"
-    },
-
-    // Do Until ===================================================
-    "DoUntil": {
-        "prefix": "DoUntil",
-        "body": [
-            "Do Until ${1:condition}",
-            "    ",
-            "Loop"
-        ],
-        "description": "Do Until Loop code block"
-    },
-
-    // Sub Function ===================================================
-    "Suberr": {
-        "prefix": "Suberr",
-        "body": [
-            "Sub ${1:subName}()",
-            "    '// add declarations",
-            "    On Error GoTo catchError",
-            "exitSub:",
-            "    Exit Sub",
-            "catchError:",
-            "    '// add error handling",
-            "    GoTo exitSub",
-            "End Sub"
-        ],
-        "description": "Sub code block with error handling"
-    },
-    "Functionerr": {
-        "prefix": "Functionerr",
-        "body": [
-            "Function ${1:functionName}() As ${2:functionType}",
-            "    '// add declarations",
-            "    On Error GoTo catchError",
-            "exitFunction:",
-            "    Exit Function",
-            "catchError:",
-            "    '// add error handling",
-            "    GoTo exitFunction",
-            "End Function"
-        ],
-        "description": "Function code block with error handling"
-    },
-    // Select Case ===================================================
-    "Selectc": {
-        "prefix": "Selectc",
-        "body": [
-            "Select Case ${1:testexpression}",
-            "    Case ${2:expressionlist-n}",
-            "        ${3:statements-n}",
-            "    Case Else",
-            "        ${4:elsestatements}",
-            "End Select"
-        ],
-        "description": "Select Case code block"
-    },
-    "MsgBox": {
-        "prefix": "MsgBox",
-        "body": [
-            "MsgBox \"${1:msgPrompt}\", ${2:vbButtonType}, \"${3:msgTitle}\""
-        ],
-        "description": "Message box code block"
-    }
+  "Boolean": {
+    "prefix": "Dimb",
+    "body": ["Dim bol${1:varName} As Boolean"],
+    "description": "Boolean declaration"
+  },
+  "Integer": {
+    "prefix": "Dimi",
+    "body": ["Dim int${1:varName} As Integer"],
+    "description": "Integer declaration"
+  },
+  "Long": {
+    "prefix": "Diml",
+    "body": ["Dim lng${1:varName} As Long"],
+    "description": "Long declaration"
+  },
+  "Single": {
+    "prefix": "Dims",
+    "body": ["Dim sng${1:varName} As Single"],
+    "description": "Single declaration"
+  },
+  "Double": {
+    "prefix": "Dimd",
+    "body": ["Dim dbl${1:varName} As Double"],
+    "description": "Double declaration"
+  },
+  "Currency": {
+    "prefix": "Dimc",
+    "body": ["Dim cur${1:varName} As Currency"],
+    "description": "Currency declaration"
+  },
+  "Date": {
+    "prefix": "Dimdt",
+    "body": ["Dim dat${1:varName} As Date"],
+    "description": "Date declaration"
+  },
+  "String": {
+    "prefix": "Dims",
+    "body": ["Dim str${1:varName} As String"],
+    "description": "String declaration"
+  },
+  "Object": {
+    "prefix": "Dimo",
+    "body": ["Dim obj${1:varName} As Object"],
+    "description": "Object declaration"
+  },
+  "Variant": {
+    "prefix": "Dimv",
+    "body": ["Dim bol${1:varName} As Variant"],
+    "description": "Variant declaration"
+  },
+  "If": {
+    "prefix": "Ife",
+    "body": [
+      "If ${1:expression} Then",
+      "    ",
+      "ElseIf ${1:expression} Then",
+      "    ",
+      "Else",
+      "    ",
+      "End If"
+    ],
+    "description": "If ElseIf Else code block"
+  },
+  "ForEach": {
+    "prefix": "ForE",
+    "body": [
+      "For Each ${1:element} In ${2:group} ",
+      "    ",
+      "Next ${1:element}"
+    ],
+    "description": "For Each code block"
+  },
+  "DoLoopw": {
+    "prefix": "DoLoopw",
+    "body": ["Do", "    ", "Exit Do", "    ", "Loop While"],
+    "description": "Do Loop While code block"
+  },
+  "DoLoopu": {
+    "prefix": "DoLoopu",
+    "body": ["Do", "    ", "    Exit Do", "    ", "Loop Until"],
+    "description": "Do Loop Until code block"
+  },
+  "DoWhile": {
+    "prefix": "DoWhile",
+    "body": ["Do While ${1:condition}", "    ", "Loop"],
+    "description": "Do While Loop code block"
+  },
+  "DoUntil": {
+    "prefix": "DoUntil",
+    "body": ["Do Until ${1:condition}", "    ", "Loop"],
+    "description": "Do Until Loop code block"
+  },
+  "Suberr": {
+    "prefix": "Suberr",
+    "body": [
+      "Sub ${1:subName}()",
+      "    '// add declarations",
+      "    On Error GoTo catchError",
+      "exitSub:",
+      "    Exit Sub",
+      "catchError:",
+      "    '// add error handling",
+      "    GoTo exitSub",
+      "End Sub"
+    ],
+    "description": "Sub code block with error handling"
+  },
+  "Functionerr": {
+    "prefix": "Functionerr",
+    "body": [
+      "Function ${1:functionName}() As ${2:functionType}",
+      "    '// add declarations",
+      "    On Error GoTo catchError",
+      "exitFunction:",
+      "    Exit Function",
+      "catchError:",
+      "    '// add error handling",
+      "    GoTo exitFunction",
+      "End Function"
+    ],
+    "description": "Function code block with error handling"
+  },
+  "Selectc": {
+    "prefix": "Selectc",
+    "body": [
+      "Select Case ${1:testexpression}",
+      "    Case ${2:expressionlist-n}",
+      "        ${3:statements-n}",
+      "    Case Else",
+      "        ${4:elsestatements}",
+      "End Select"
+    ],
+    "description": "Select Case code block"
+  },
+  "MsgBox": {
+    "prefix": "MsgBox",
+    "body": [
+      "MsgBox \"${1:msgPrompt}\", ${2:vbButtonType}, \"${3:msgTitle}\""
+    ],
+    "description": "Message box code block"
+  }
 }
