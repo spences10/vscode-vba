@@ -111,7 +111,7 @@
     },
     {
       "match":
-        "(?i:\\s*\\b(Call|Class|Const|Dim|Redim|Function|Sub|Private Sub|Public Sub|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
+        "(?i:\\s*\\b(Call|Const|Dim|ReDim|Function|Sub|Private Sub|Public Sub|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
       "name": "storage.type.asp"
     },
     {
@@ -214,7 +214,7 @@
     },
     {
       "match":
-        "!|\\$|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?\\:|\\*=|/=|%=|\\+=|\\-=|&=|\\^=|\\b(in|instanceof|new|delete|typeof|void)\\b",
+        "!|\\$|%|&|=|<=|>=|<>|<|>|!|^|&&|\\|\\b(mod|in|new|delete|typeof)\\b",
       "name": "keyword.operator.js"
     }
   ],
