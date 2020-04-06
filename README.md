@@ -71,11 +71,33 @@ You can contact me in the following ways:
 I struggled to find how to generate a token after not doing anything
 with this project for well over a year:
 
-https://YOUR_USER_NAME.visualstudio.com/_details/security/tokens
+To get to your token creation, go here:
 
-Some good documentation on the CLI:
+- https://YOUR_USER_NAME.visualstudio.com/_details/security/tokens
 
-https://vscode-docs.readthedocs.io/en/latest/tools/vscecli/
+**Create a token:**
+
+- Name: vsce
+- Organisation: All accessible organizations
+- show all scopes, select:
+  - Marketplace
+  - Check Acquire and Manage
+
+**Publish with CLI:**
+
+```bash
+# login
+vsce login <publisher name>
+vsce package
+# myExtension.vsix generated
+# bump version
+# vsce publish major, minor or patch
+vsce publish -p <add created token here>
+```
+
+Some good documentation on publishing with the CLI:
+
+- https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
 ## Version history
 
