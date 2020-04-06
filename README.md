@@ -95,6 +95,10 @@ vsce package
 vsce publish -p <add created token here>
 ```
 
+If you get `ERROR Failed request: (401)` see here:
+
+- https://github.com/Microsoft/vscode-vsce/issues/11
+
 Some good documentation on publishing with the CLI:
 
 - https://code.visualstudio.com/api/working-with-extensions/publishing-extension
