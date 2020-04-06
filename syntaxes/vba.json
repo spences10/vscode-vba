@@ -53,40 +53,26 @@
       ]
     },
     {
-      "captures": {
-        "1": {
-          "name": "storage.type.function.asp"
-        },
-        "2": {
-          "name": "entity.name.function.asp"
-        },
-        "3": {
-          "name": "punctuation.definition.parameters.asp"
-        },
-        "4": {
-          "name": "variable.parameter.function.asp"
-        },
-        "5": {
-          "name": "punctuation.definition.parameters.asp"
-        }
+      "comment":"This particular syntax allows for multi-line comments with _",
+      "begin": "'|(?i:rem)",
+      "beginCaptures": {
+        "0": { "name": "COMMENT_OPEN" }
       },
-      "match":
-        "^\\s*((?i:function|sub|public sub|private sub|public function|private function))\\s*([a-zA-Z_]\\w*)\\s*(\\()([^)]*)(\\)).*\\n?",
-      "name": "meta.function.asp"
-    },
-    {
-      "begin": "('|(?i:Rem)\\s{1,})",
-      "beginCaptures": [
+      "end":"\\n",
+      "endCaptures": { 
+        "0": {"name": "END_COMMENT"}
+      },
+      "name": "comment.line.apostrophe.asp",
+      "patterns": [
         {
-          "name": "punctuation.definition.comment.asp"
+          "match": "\\s_\\s*\\n",
+          "name": "comment.line.escape.apostrophe.asp"
         }
-      ],
-      "end": "(?=(\\n|%>))",
-      "name": "comment.line.apostrophe.asp"
+      ]
     },
     {
       "match":
-        "(?i:\\b(If|Then|Else|ElseIf|Else If|End If|While|Wend|For|To|Each|In|Step|Case|Select|End Select|Return|Continue|Do|Until|Loop|Next|With|End With|Exit Do|Exit For|Exit Function|Exit Property|Exit Sub|IIf)\\b)",
+        "(?i:\\b(If|Then|Else|ElseIf|End If|While|Wend|For|To|Each|In|Step|Case|Select|End Select|Return|Continue|Do|Until|Loop|Next|With|End With|Exit Do|Exit For|Exit Function|Exit Property|Exit Sub|IIf)\\b)",
       "name": "keyword.control.asp"
     },
     {
@@ -111,11 +97,11 @@
     },
     {
       "match":
-        "(?i:\\s*\\b(Call|Const|Dim|ReDim|Function|Sub|Private Sub|Public Sub|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
+        "(?i:\\s*\\b(Const|Dim|As|ReDim|Function|Sub|End|Enum|Type|Public|Private|Friend|Implements|Call|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
       "name": "storage.type.asp"
     },
     {
-      "match": "(?i:\\b(Private|Public|Default)\\b)",
+      "match": "(?i:\\b(Private|Public|Optional)\\b)",
       "name": "storage.modifier.asp"
     },
     {

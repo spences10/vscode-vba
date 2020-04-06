@@ -53,11 +53,20 @@
     "prefix": "Ife",
     "body": [
       "If ${1:expression} Then",
-      "    ",
+      "\t",
       "ElseIf ${1:expression} Then",
-      "    ",
+      "\t",
       "Else",
-      "    ",
+      "\t",
+      "End If"
+    ],
+    "description": "If ElseIf Else code block"
+  },
+  "If2": {
+    "prefix": "If",
+    "body": [
+      "If ${1:expression} Then",
+      "\t",
       "End If"
     ],
     "description": "If ElseIf Else code block"
@@ -66,29 +75,29 @@
     "prefix": "ForE",
     "body": [
       "For Each ${1:element} In ${2:group} ",
-      "    ",
+      "\t",
       "Next ${1:element}"
     ],
     "description": "For Each code block"
   },
   "DoLoopw": {
     "prefix": "DoLoopw",
-    "body": ["Do", "    ", "Exit Do", "    ", "Loop While"],
+    "body": ["Do", "\t", "Exit Do", "\t", "Loop While"],
     "description": "Do Loop While code block"
   },
   "DoLoopu": {
     "prefix": "DoLoopu",
-    "body": ["Do", "    ", "    Exit Do", "    ", "Loop Until"],
+    "body": ["Do", "\t", "    Exit Do", "\t", "Loop Until"],
     "description": "Do Loop Until code block"
   },
   "DoWhile": {
     "prefix": "DoWhile",
-    "body": ["Do While ${1:condition}", "    ", "Loop"],
+    "body": ["Do While ${1:condition}", "\t", "Loop"],
     "description": "Do While Loop code block"
   },
   "DoUntil": {
     "prefix": "DoUntil",
-    "body": ["Do Until ${1:condition}", "    ", "Loop"],
+    "body": ["Do Until ${1:condition}", "\t", "Loop"],
     "description": "Do Until Loop code block"
   },
   "Suberr": {
