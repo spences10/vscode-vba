@@ -62,6 +62,15 @@
     ],
     "description": "If ElseIf Else code block"
   },
+  "If2": {
+    "prefix": "If",
+    "body": [
+      "If ${1:expression} Then",
+      "    ",
+      "End If"
+    ],
+    "description": "If ElseIf Else code block"
+  },
   "ForEach": {
     "prefix": "ForE",
     "body": [
