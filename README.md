@@ -6,14 +6,16 @@
 
 <!-- TOC depthFrom:2 -->
 
-- [Syntax Highlighting](#syntax-highlighting)
-- [Snippets](#snippets)
-  - [Basic code](#basic-code)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Contacts](#contacts)
-- [Links](#links)
-- [Handy links](#handy-links)
+- [VSCode VBA](#vscode-vba)
+  - [Syntax Highlighting](#syntax-highlighting)
+  - [Snippets](#snippets)
+    - [Basic code](#basic-code)
+  - [Installation](#installation)
+  - [Contributing](#contributing)
+  - [Contacts](#contacts)
+  - [Links](#links)
+  - [Handy links](#handy-links)
+  - [Version history](#version-history)
 
 <!-- /TOC -->
 
@@ -81,7 +83,7 @@ To get to your token creation, go here:
 - Organisation: All accessible organizations
 - show all scopes, select:
   - Marketplace
-  - Check Acquire and Manage
+    - Check Acquire and Manage
 
 **Publish with CLI:**
 
@@ -91,6 +93,7 @@ vsce login <publisher name>
 vsce package
 # myExtension.vsix generated
 # bump version
+vsce publish minor # | major | patch
 # vsce publish major, minor or patch
 vsce publish -p <add created token here>
 ```
@@ -110,4 +113,8 @@ Some good documentation on publishing with the CLI:
 20200405 - Multi-line comment capability
 20200405 - Added certain keywords e.g. Type, Enum, Implements, Optional, Friend, ... Also changed behavior of some keywords, e.g. "End","Function","Sub" instead of "End Function", "End Sub" etc..
 20200405 - Removal of non-vba behavior.
+20200714 - [Comment with REM].
 ```
+
+<!-- Links -->
+[Comment with REM]:https://github.com/spences10/vscode-vba/pull/13
