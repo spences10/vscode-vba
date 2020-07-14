@@ -54,7 +54,7 @@
     },
     {
       "comment":"This particular syntax allows for multi-line comments with _",
-      "begin": "'|(?i:rem)",
+      "begin": "'|(?i:(?<=(:|^)(\\s)*)rem\\b)",
       "beginCaptures": {
         "0": { "name": "COMMENT_OPEN" }
       },
