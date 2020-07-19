@@ -6,7 +6,7 @@
   "icon": "images/logo.png",
   "publisher": "spences10",
   "engines": {
-    "vscode": "^1.8.1"
+    "vscode": "^1.47.0"
   },
   "categories": [
     "Programming Languages",
