@@ -12,7 +12,7 @@ export class VbaDocumentSymbolProvider implements vscode.DocumentSymbolProvider 
         console.log('VbaDocumentSymbolProvider.provideDocumentSymbols');
         // [Public | Private | Friend] [Static] Function name [(arglist)] [As type]
         // [Public | Private | Friend] [Static] Sub name [(arglist)]
-        const functionRegex = /^\s*((Public|Private|Friend)\s+)?((Static)\s+)?(Function|Sub)\s+(\w+)/i;
+        const functionRegex = /^\s*((Public|Private|Friend)\s+)?((Static)\s+)?(Function|Sub|Property)\s+(\w+)/i;
 
         const result: vscode.SymbolInformation[] = [];
 

@@ -97,7 +97,7 @@
     },
     {
       "match":
-        "(?i:\\s*\\b(Const|Dim|As|ReDim|Function|Sub|End|Enum|Type|Public|Private|Friend|Implements|Call|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
+        "(?i:\\s*\\b(Const|Dim|As|ReDim|Function|Sub|End|Enum|Type|Public|Private|Friend|Implements|Call|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve|Property)\\b\\s*)",
       "name": "storage.type.asp"
     },
     {
