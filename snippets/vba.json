@@ -105,12 +105,12 @@
     "body": [
       "Sub ${1:subName}()",
       "    '// add declarations",
-      "    On Error GoTo catchError",
-      "exitSub:",
+      "    On Error GoTo catch${1:subName}Error",
+      "exit${1:subName}Sub:",
       "    Exit Sub",
-      "catchError:",
+      "catch${1:subName}Error:",
       "    '// add error handling",
-      "    GoTo exitSub",
+      "    GoTo exit${1:subName}Sub",
       "End Sub"
     ],
     "description": "Sub code block with error handling"
