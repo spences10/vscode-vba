@@ -87,6 +87,9 @@ To get to your token creation, go here:
 ```bash
 # login
 vsce login <publisher name>
+# install the things
+npm i
+# use the token created in earlier step
 vsce package
 # myExtension.vsix generated
 # bump version
