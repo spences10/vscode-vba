@@ -15,7 +15,6 @@
   - [Contacts](#contacts)
   - [Links](#links)
   - [Handy links](#handy-links)
-  - [Version history](#version-history)
 
 <!-- /TOC -->
 
@@ -105,16 +104,6 @@ If you get `ERROR Failed request: (401)` see here:
 Some good documentation on publishing with the CLI:
 
 - https://code.visualstudio.com/api/working-with-extensions/publishing-extension
-
-## Version history
-
-```
-20200405 - Added basic If snippet, and changed all snippets to use tabs (for user customisation capability).
-20200405 - Multi-line comment capability
-20200405 - Added certain keywords e.g. Type, Enum, Implements, Optional, Friend, ... Also changed behavior of some keywords, e.g. "End","Function","Sub" instead of "End Function", "End Sub" etc..
-20200405 - Removal of non-vba behavior.
-20200714 - [Comment with REM].
-```
 
 <!-- Links -->
 
