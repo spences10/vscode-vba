@@ -23,11 +23,8 @@
 
 This package provides syntax highlighting and snippets of VBA.
 
-Based off an import of the
-[VBScript.tmLanguage](https://github.com/SublimeText/VBScript/blob/master/VBScript.tmLanguage)
-file from the
-[Sublime Text VBScript](https://github.com/SublimeText/VBScript)
-repository.
+Based off an import of the [VBScript.tmLanguage] file from the
+[Sublime Text VBScript] repository.
 
 ## Snippets
 
@@ -60,13 +57,13 @@ reviewed and discussed.
 
 You can contact me in the following ways:
 
-- Mail : [spences10apps@gmail.com](mailto:spences10apps@gmail.com)
-- Github : [spences10](https://github.com/spences10)
+- Mail : [spences10apps@gmail.com]
+- Github : [spences10]
 
 ## Links
 
-- [Source Code](https://github.com/spences10/vscode-vba)
-- [Market](https://marketplace.visualstudio.com/items?itemName=spences10.VBA)
+- [Source Code]
+- [Market]
 
 ## Handy links
 
@@ -117,4 +114,13 @@ Some good documentation on publishing with the CLI:
 ```
 
 <!-- Links -->
-[Comment with REM]:https://github.com/spences10/vscode-vba/pull/13
+
+[comment with rem]: https://github.com/spences10/vscode-vba/pull/13
+[vbscript.tmlanguage]:
+  https://github.com/SublimeText/VBScript/blob/master/VBScript.tmLanguage
+[sublime text vbscript]: https://github.com/SublimeText/VBScript
+[spences10apps@gmail.com]: mailto:spences10apps@gmail.com
+[spences10]: https://github.com/spences10
+[source code]: https://github.com/spences10/vscode-vba
+[market]:
+  https://marketplace.visualstudio.com/items?itemName=spences10.VBA
