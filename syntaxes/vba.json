@@ -1,17 +1,28 @@
 {
-  "comment":
-    "Modified from the original ASP bundle. Originally modified by Thomas Aylott subtleGradient.com",
-  "fileTypes": ["bas", "cls", "frm", "sht", "wbk"],
-  "foldingStartMarker":
-    "(<(?i:(head|table|div|style|script|ul|ol|form|dl))\\b.*?>|\\{|^\\s*<?%?\\s*'?\\s*(?i:(sub|private\\s+Sub|public\\s+Sub|function|if|while|For))\\s*.*$)",
-  "foldingStopMarker":
-    "(</(?i:(head|table|div|style|script|ul|ol|form|dl))>?|\\}|^\\s*<?%?\\s*\\s*'?\\s*(?i:(end|Next))\\s*.*$)",
+  "comment": "Modified from the original ASP bundle. Originally modified by Thomas Aylott subtleGradient.com",
+  "fileTypes": [
+    "bas",
+    "cls",
+    "frm",
+    "sht",
+    "wbk"
+  ],
+  "foldingStartMarker": "(<(?i:(head|table|div|style|script|ul|ol|form|dl))\\b.*?>|\\{|^\\s*<?%?\\s*'?\\s*(?i:(sub|private\\s+Sub|public\\s+Sub|function|if|while|For))\\s*.*$)",
+  "foldingStopMarker": "(</(?i:(head|table|div|style|script|ul|ol|form|dl))>?|\\}|^\\s*<?%?\\s*\\s*'?\\s*(?i:(end|Next))\\s*.*$)",
   "keyEquivalent": "^~A",
   "name": "VBA",
   "patterns": [
     {
       "match": "\\n",
+      "name": "invalid.illegal"
+    },
+    {
+      "match": "\\r\\n",
       "name": "meta.ending-space"
+    },
+    {
+      "match": "VERSION 1\\.0 CLASS|BEGIN",
+      "name": "storage.type.asp"
     },
     {
       "include": "#round-brackets"
@@ -53,14 +64,18 @@
       ]
     },
     {
-      "comment":"This particular syntax allows for multi-line comments with _",
-      "begin": "'|(?i:rem)",
+      "comment": "This particular syntax allows for multi-line comments with _",
+      "begin": "'|(?i:^rem )",
       "beginCaptures": {
-        "0": { "name": "COMMENT_OPEN" }
+        "0": {
+          "name": "COMMENT_OPEN"
+        }
       },
-      "end":"\\n",
-      "endCaptures": { 
-        "0": {"name": "END_COMMENT"}
+      "end": "\\n",
+      "endCaptures": {
+        "0": {
+          "name": "END_COMMENT"
+        }
       },
       "name": "comment.line.apostrophe.asp",
       "patterns": [
@@ -71,42 +86,32 @@
       ]
     },
     {
-      "match":
-        "(?i:\\b(If|Then|Else|ElseIf|End If|While|Wend|For|To|Each|In|Step|Case|Select|End Select|Return|Continue|Do|Until|Loop|Next|With|End With|Exit Do|Exit For|Exit Function|Exit Property|Exit Sub|IIf)\\b)",
+      "match": "(?i:\\b(If|Then|Else|ElseIf|End If|While|Wend|For|To|Each|In|Step|Case|Select|End Select|Return|Continue|Do|Until|Loop|Next|With|End With|Exit Do|Exit For|Exit Function|Exit Property|Exit Sub|IIf)\\b)",
       "name": "keyword.control.asp"
     },
     {
-      "match": "(?i:\\b(Mod|And|Not|Is|Or|Xor|as)\\b)",
-      "name": "keyword.operator.asp"
+      "match": "(?i:\\b(Mod|And|Not|Is|Or|Xor|as|\\!|\\$|\\%|\\&|\\=|\\<\\=|\\>\\=|\\<\\>|\\<|\\>|\\^|mod|in)\\b)",
+      "name": "support.class.collection.asp"
     },
     {
-      "captures": {
-        "1": {
-          "name": "storage.type.asp"
-        },
-        "2": {
-          "name": "variable.other.bfeac.asp"
-        },
-        "3": {
-          "name": "meta.separator.comma.asp"
-        }
-      },
-      "match":
-        "(?i:(dim)\\s*(?:(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b)\\s*(,?)))",
-      "name": "variable.other.dim.asp"
-    },
-    {
-      "match":
-        "(?i:\\s*\\b(Const|Dim|As|ReDim|Function|Sub|End|Enum|Type|Public|Private|Friend|Implements|Call|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|ByRef|ByVal|Public Function|Private Function|Preserve)\\b\\s*)",
+      "match": "(?i:\\s*\\b(Declare|Lib|PtrSafe|Attribute|Property|RaiseEvent|Static|Event|Const|Dim|As|ReDim|Function|Sub|End|Enum|Type|Public|Private|Friend|Implements|Call|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo|Public Function|Private Function|Preserve)\\b\\s*)",
       "name": "storage.type.asp"
     },
     {
-      "match": "(?i:\\b(Private|Public|Optional)\\b)",
+      "match": "#(?i:const|if|elseif|else|end if)",
+      "name": "keyword.control.asp"
+    },
+    {
+      "match": "(?i:\\b(Private|Public|Optional|WithEvents|ParamArray|ByRef|ByVal)\\b)",
       "name": "storage.modifier.asp"
     },
     {
-      "match": "(?i:\\s*\\b(Empty|False|Nothing|Null|True)\\b)",
+      "match": "(?i:\\s*\\b(VBA7|Win64|Me|Empty|False|Nothing|Null|True)\\b)",
       "name": "constant.language.asp"
+    },
+    {
+      "match": "VB_Name|VB_GlobalNameSpace|VB_Creatable|VB_PredeclaredId|VB_Exposed|VB_VarUserMemId|VB_UserMemId|VB_VarDescription|VB_Description|VB_HelpID",
+      "name": "support.class.asp"
     },
     {
       "begin": "\"",
@@ -139,48 +144,39 @@
       "name": "variable.other.asp"
     },
     {
-      "match":
-        "(?i:\\b(Application|ObjectContext|Request|Response|Server|Session)\\b)",
+      "match": "(?i:\\b(Application|MSForms|stdole|Excel|Office|VBA|Err)\\b)",
       "name": "support.class.asp"
     },
     {
-      "match":
-        "(?i:\\b(Contents|StaticObjects|ClientCertificate|Cookies|Form|QueryString|ServerVariables)\\b)",
+      "match": "(?i:\\b(Contents|StaticObjects|ClientCertificate|Cookies|Form|QueryString|ServerVariables)\\b)",
       "name": "support.class.collection.asp"
     },
     {
-      "match":
-        "(?i:\\b(TotalBytes|Buffer|CacheControl|Charset|ContentType|Expires|ExpiresAbsolute|IsClientConnected|PICS|Status|ScriptTimeout|CodePage|LCID|SessionID|Timeout)\\b)",
+      "match": "(?i:\\b(TotalBytes|Buffer|CacheControl|Charset|ContentType|Expires|ExpiresAbsolute|IsClientConnected|PICS|Status|ScriptTimeout|CodePage|LCID|SessionID|Timeout)\\b)",
       "name": "support.constant.asp"
     },
     {
-      "match":
-        "(?i:\\b(Lock|Unlock|SetAbort|SetComplete|BinaryRead|AddHeader|AppendToLog|BinaryWrite|Clear|End|Flush|Redirect|Write|CreateObject|HTMLEncode|MapPath|URLEncode|Abandon|Convert|Regex)\\b)",
+      "match": "(?i:\\b(Lock|Unlock|SetAbort|SetComplete|BinaryRead|AddHeader|AppendToLog|BinaryWrite|Clear|End|Flush|Redirect|Write|CreateObject|HTMLEncode|MapPath|URLEncode|Abandon|Convert|Regex)\\b)",
       "name": "support.function.asp"
     },
     {
-      "match":
-        "(?i:\\b(Application_OnEnd|Application_OnStart|OnTransactionAbort|OnTransactionCommit|Session_OnEnd|Session_OnStart)\\b)",
+      "match": "(?i:\\b(Application_OnEnd|Application_OnStart|OnTransactionAbort|OnTransactionCommit|Session_OnEnd|Session_OnStart)\\b)",
       "name": "support.function.event.asp"
     },
     {
-      "match":
-        "(?i:(?<=as )(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b))",
+      "match": "(?i:(?<=as\\s+)(\\b[a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?\\b))",
       "name": "support.type.vb.asp"
     },
     {
-      "match":
-        "(?i:\\b(Array|Add|Asc|Atn|CBool|CByte|CCur|CDate|CDbl|Chr|CInt|CLng|Conversions|Cos|CreateObject|CSng|CStr|Date|DateAdd|DateDiff|DatePart|DateSerial|DateValue|Day|Derived|Math|Escape|Eval|Exists|Exp|Filter|FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|GetLocale|GetObject|GetRef|Hex|Hour|InputBox|InStr|InStrRev|Int|Fix|IsArray|IsDate|IsEmpty|IsNull|IsNumeric|IsObject|Item|Items|Join|Keys|LBound|LCase|Left|Len|LoadPicture|Log|LTrim|RTrim|Trim|Maths|Mid|Minute|Month|MonthName|MsgBox|Now|Oct|Remove|RemoveAll|Replace|RGB|Right|Rnd|Round|ScriptEngine|ScriptEngineBuildVersion|ScriptEngineMajorVersion|ScriptEngineMinorVersion|Second|SetLocale|Sgn|Sin|Space|Split|Sqr|StrComp|String|StrReverse|Tan|Time|Timer|TimeSerial|TimeValue|TypeName|UBound|UCase|Unescape|VarType|Weekday|WeekdayName|Year)\\b)",
+      "match": "(?i:\\b(Erase|TypeOf|DoEvents|Array|Add|Asc|Atn|CBool|CByte|CCur|CDate|CDbl|Chr|CInt|CLng|Conversions|Cos|CreateObject|CSng|CStr|Date|DateAdd|DateDiff|DatePart|DateSerial|DateValue|Day|Derived|Math|Escape|Eval|Exists|Exp|Filter|FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|GetLocale|GetObject|GetRef|Hex|Hour|InputBox|InStr|InStrRev|Int|Fix|IsArray|IsDate|IsEmpty|IsNull|IsNumeric|IsObject|Item|Items|Join|Keys|LBound|LCase|Left|Len|LoadPicture|Log|LTrim|RTrim|Trim|Maths|Mid|Minute|Month|MonthName|MsgBox|Now|Oct|Remove|RemoveAll|Replace|RGB|Right|Rnd|Round|ScriptEngine|ScriptEngineBuildVersion|ScriptEngineMajorVersion|ScriptEngineMinorVersion|Second|SetLocale|Sgn|Sin|Space|Split|Sqr|StrComp|String|StrReverse|Tan|Time|Timer|TimeSerial|TimeValue|TypeName|UBound|UCase|Unescape|VarType|Weekday|WeekdayName|Year)\\b)",
       "name": "support.function.vb.asp"
     },
     {
-      "match":
-        "-?\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\\b",
+      "match": "-?\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\\b",
       "name": "constant.numeric.asp"
     },
     {
-      "match":
-        "(?i:\\s*\\b(vbtrue|vbfalse|vbcr|vbcrlf|vbformfeed|vblf|vbnewline|vbnullchar|vbnullstring|int32|vbtab|vbverticaltab|vbbinarycompare|vbtextcompare|vbsunday|vbmonday|vbtuesday|vbwednesday|vbthursday|vbfriday|vbsaturday|vbusesystemdayofweek|vbfirstjan1|vbfirstfourdays|vbfirstfullweek|vbgeneraldate|vblongdate|vbshortdate|vblongtime|vbshorttime|vbobjecterror|vbEmpty|vbNull|vbInteger|vbLong|vbSingle|vbDouble|vbCurrency|vbDate|vbString|vbObject|vbError|vbBoolean|vbVariant|vbDataObject|vbDecimal|vbByte|vbArray)\\b\\s*)",
+      "match": "(?i:\\s*\\b(vblonglong|vbtrue|vbfalse|vbcr|vbcrlf|vbformfeed|vblf|vbnewline|vbnullchar|vbnullstring|int32|vbtab|vbverticaltab|vbbinarycompare|vbtextcompare|vbsunday|vbmonday|vbtuesday|vbwednesday|vbthursday|vbfriday|vbsaturday|vbusesystemdayofweek|vbfirstjan1|vbfirstfourdays|vbfirstfullweek|vbgeneraldate|vblongdate|vbshortdate|vblongtime|vbshorttime|vbobjecterror|vbEmpty|vbNull|vbInteger|vbLong|vbSingle|vbDouble|vbCurrency|vbDate|vbString|vbObject|vbError|vbBoolean|vbVariant|vbDataObject|vbDecimal|vbByte|vbArray)\\b\\s*)",
       "name": "support.type.vb.asp"
     },
     {
@@ -189,19 +185,12 @@
           "name": "entity.name.function.asp"
         }
       },
-      "match":
-        "(?i:(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b)(?=\\(\\)?))",
+      "match": "(?i:(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b)(?=\\(\\)?))",
       "name": "support.function.asp"
     },
     {
-      "match":
-        "(?i:((?<=(\\+|=|-|\\&|\\\\|/|<|>|\\(|,))\\s*\\b([a-zA-Z_xf-xff][a-zA-Z0-9_xf-xff]*?)\\b(?!(\\(|\\.))|\\b([a-zA-Z_xf-xff][a-zA-Z0-9_xf-xff]*?)\\b(?=\\s*(\\+|=|-|\\&|\\\\|/|<|>|\\(|\\)))))",
-      "name": "variable.other.asp"
-    },
-    {
-      "match":
-        "!|\\$|%|&|=|<=|>=|<>|<|>|!|^|&&|\\|\\b(mod|in|new|delete|typeof)\\b",
-      "name": "keyword.operator.js"
+      "match": "&H[0-9A-F]+",
+      "name": "support.type.vb.asp"
     }
   ],
   "repository": {
