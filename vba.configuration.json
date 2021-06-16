@@ -2,5 +2,41 @@
   "comments": {
     "lineComment": "'"
   },
-  "brackets": [["{", "}"], ["[", "]"], ["(", ")"]]
+  "brackets": [
+    [
+      "[",
+      "]"
+    ],
+    [
+      "(",
+      ")"
+    ]
+  ],
+  "autoClosingPairs": [
+    [
+      "[",
+      "]"
+    ],
+    [
+      "(",
+      ")"
+    ],
+    {
+      "open": "\"",
+      "close": "\"",
+      "notIn": [
+        "string"
+      ]
+    }
+  ],
+  "indentationRules": {
+    "increaseIndentPattern": {
+      "pattern": "(^|:)[ \\t]*\\b((while|case|select[ \\t]+case|for|open)\\b.*|((public|private|friend)[ \\t]+)?(property|enum|function|sub)\\b.*|(if[ \\t]+.*[ \\t]+then[ \\t]*[^' \\t]*)|(on[ \\t]+error[ \\t]+((goto[ \\t]+[^0].*)|resume[ \\t]+next))\\b|(do)\\b)([ \\t]*'.*$|$|:)",
+      "flags": "i"
+    },
+    "decreaseIndentPattern": {
+      "pattern": "(^|\\s*)((?:end[ \t]+(?:if|function|sub|property|enum|select))|next|loop|wend|else|on error goto 0|close\\s+)$",
+      "flags": "i"
+    }
+  }
 }
