@@ -6,14 +6,15 @@
 
 <!-- TOC depthFrom:2 -->
 
-- [Syntax Highlighting](#syntax-highlighting)
-- [Snippets](#snippets)
-  - [Basic code](#basic-code)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Contacts](#contacts)
-- [Links](#links)
-- [Handy links](#handy-links)
+- [VSCode VBA](#vscode-vba)
+  - [Syntax Highlighting](#syntax-highlighting)
+  - [Snippets](#snippets)
+    - [Basic code](#basic-code)
+  - [Installation](#installation)
+  - [Contributing](#contributing)
+  - [Contacts](#contacts)
+  - [Links](#links)
+  - [Handy links](#handy-links)
 
 <!-- /TOC -->
 
@@ -21,11 +22,8 @@
 
 This package provides syntax highlighting and snippets of VBA.
 
-Based off an import of the
-[VBScript.tmLanguage](https://github.com/SublimeText/VBScript/blob/master/VBScript.tmLanguage)
-file from the
-[Sublime Text VBScript](https://github.com/SublimeText/VBScript)
-repository.
+Based off an import of the [VBScript.tmLanguage] file from the
+[Sublime Text VBScript] repository.
 
 ## Snippets
 
@@ -58,30 +56,63 @@ reviewed and discussed.
 
 You can contact me in the following ways:
 
-- Mail : [spences10apps@gmail.com](mailto:spences10apps@gmail.com)
-- Github : [spences10](https://github.com/spences10)
+- Mail : [spences10apps@gmail.com]
+- Github : [spences10]
 
 ## Links
 
-- [Source Code](https://github.com/spences10/vscode-vba)
-- [Market](https://marketplace.visualstudio.com/items?itemName=spences10.VBA)
+- [Source Code]
+- [Market]
 
 ## Handy links
 
 I struggled to find how to generate a token after not doing anything
 with this project for well over a year:
 
-https://YOUR_USER_NAME.visualstudio.com/_details/security/tokens
+To get to your token creation, go here:
 
-Some good documentation on the CLI:
+- https://YOUR_USER_NAME.visualstudio.com/_details/security/tokens
 
-https://vscode-docs.readthedocs.io/en/latest/tools/vscecli/
+**Create a token:**
 
-## Version history
+- Name: vsce
+- Organisation: All accessible organizations
+- show all scopes, select:
+  - Marketplace
+    - Check Acquire and Manage
 
+**Publish with CLI:**
+
+```bash
+# login
+vsce login <publisher name>
+# install the things
+npm i
+# use the token created in earlier step
+vsce package
+# myExtension.vsix generated
+# bump version
+vsce publish minor # | major | patch
+# vsce publish major, minor or patch
+vsce publish -p <add created token here>
 ```
-20200405 - Added basic If snippet, and changed all snippets to use tabs (for user customisation capability).
-20200405 - Multi-line comment capability
-20200405 - Added certain keywords e.g. Type, Enum, Implements, Optional, Friend, ... Also changed behavior of some keywords, e.g. "End","Function","Sub" instead of "End Function", "End Sub" etc..
-20200405 - Removal of non-vba behavior.
-```
+
+If you get `ERROR Failed request: (401)` see here:
+
+- https://github.com/Microsoft/vscode-vsce/issues/11
+
+Some good documentation on publishing with the CLI:
+
+- https://code.visualstudio.com/api/working-with-extensions/publishing-extension
+
+<!-- Links -->
+
+[comment with rem]: https://github.com/spences10/vscode-vba/pull/13
+[vbscript.tmlanguage]:
+  https://github.com/SublimeText/VBScript/blob/master/VBScript.tmLanguage
+[sublime text vbscript]: https://github.com/SublimeText/VBScript
+[spences10apps@gmail.com]: mailto:spences10apps@gmail.com
+[spences10]: https://github.com/spences10
+[source code]: https://github.com/spences10/vscode-vba
+[market]:
+  https://marketplace.visualstudio.com/items?itemName=spences10.VBA

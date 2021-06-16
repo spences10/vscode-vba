@@ -60,8 +60,8 @@
       ]
     },
     {
-      "comment": "This particular syntax allows for multi-line comments with _",
-      "begin": "'|(?i:^rem )",
+      "comment":"This particular syntax allows for multi-line comments with _. Additionally rem is required to be only prefixed with whitespace.",
+      "begin": "'|(?i:(?<=(:|^)(\\s)*)rem\\b)",
       "beginCaptures": {
         "0": {
           "name": "COMMENT_OPEN"
