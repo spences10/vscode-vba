@@ -13,10 +13,6 @@
   "name": "VBA",
   "patterns": [
     {
-      "match": "\\n",
-      "name": "invalid.illegal"
-    },
-    {
       "match": "\\r\\n",
       "name": "meta.ending-space"
     },
